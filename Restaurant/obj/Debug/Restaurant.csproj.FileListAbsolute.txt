@@ -1,0 +1,7 @@
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.exe.config
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.exe
+C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
