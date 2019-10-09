@@ -93,7 +93,7 @@ namespace Tests
             var expectedOutput = 6;
             Assert.AreEqual(expectedOutput, receipt.ItemSubtotalCalc(2, 3));
             }
-            
+            /*
             [Test]
             public void PrintReceipt_ReturnsFormattedReceipt_WhenPassedOrder()
             {
@@ -110,9 +110,9 @@ namespace Tests
             order.addOrder("Burger", 1);
             order.addOrder("Hotdog", 2);
             receipt.FormatReceiptForPrinting(order);
-            Assert.IsTrue(ReceiptVerification.CorrectValue(receipt, 5.00));
+            Assert.IsTrue(ReceiptVerification.CorrectValue(receipt, 5.00)); 
 
-        }
+        } */
 
 
 

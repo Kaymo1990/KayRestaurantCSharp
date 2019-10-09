@@ -8,9 +8,13 @@ namespace Restaurant
 {
     public class Order
     {
+        private Menu menu;
+        public Order()
+        {
+            menu = new Menu();
+        }
 
         private IDictionary<string, int> currentOrder = new Dictionary<string, int>();
-        Menu menu = new Menu();
         public IDictionary<string, int> CurrentOrder { get => currentOrder; set => currentOrder = value; }
 
         public void addOrder(string item, int quantity)

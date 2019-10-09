@@ -26,5 +26,10 @@ namespace Restaurant
 
             return fullMenu;
         }
+
+        public IDictionary<string, double> ReturnMenu()
+        {
+            return menuPrices;
+        }
     }
 }
