@@ -104,8 +104,18 @@ namespace Tests
                 
             }
 
-        
-
+        [Test]
+        public void ReceiptVerification_ReturnsTrue_WhenPassedReceipt()
+        {
+            order.addOrder("Burger", 1);
+            order.addOrder("Hotdog", 2);
+            receipt.FormatReceiptForPrinting(order);
+            Assert.IsTrue(ReceiptVerification.CorrectValue(receipt, 5.00));
 
         }
+
+
+
+
+    }
 }

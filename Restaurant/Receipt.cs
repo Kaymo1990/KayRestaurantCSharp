@@ -9,6 +9,7 @@ namespace Restaurant
     public class Receipt
     {
         Menu menu = new Menu();
+        public double receiptTotal = 0;
 
         public string FormatReceiptForPrinting(Order order)
         {
@@ -21,7 +22,7 @@ namespace Restaurant
                 finalReceipt += $"{ singleOrder.Key } x {singleOrder.Value} : £{ itemSubtotal.ToString("F2") }" + Environment.NewLine;
                 finalTotal += itemSubtotal;
             }
-
+            receiptTotal = finalTotal;
             finalReceipt += $"Your total is: £{finalTotal.ToString("F2")}";
             return finalReceipt;
         }
