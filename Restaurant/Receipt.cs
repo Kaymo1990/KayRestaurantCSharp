@@ -24,6 +24,7 @@ namespace Restaurant
             }
             receiptTotal = finalTotal;
             finalReceipt += $"Your total is: £{finalTotal.ToString("F2")}";
+            TextOrder.SentTextOrder(finalReceipt);
             return finalReceipt;
         }
 
