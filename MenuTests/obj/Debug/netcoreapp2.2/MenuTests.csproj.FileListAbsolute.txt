@@ -16,3 +16,10 @@ C:\Users\Kay\source\repos\Restaurant\MenuTests\obj\Debug\netcoreapp2.2\MenuTests
 C:\Users\Kay\source\repos\Restaurant\MenuTests\obj\Debug\netcoreapp2.2\MenuTests.csproj.CopyComplete
 C:\Users\Kay\source\repos\Restaurant\MenuTests\obj\Debug\netcoreapp2.2\MenuTests.dll
 C:\Users\Kay\source\repos\Restaurant\MenuTests\obj\Debug\netcoreapp2.2\MenuTests.pdb
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\Twilio.dll
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Logging.dll
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\Twilio.xml
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Kay\source\repos\Restaurant\MenuTests\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
