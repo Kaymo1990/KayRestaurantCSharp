@@ -65,5 +65,47 @@ namespace Tests
             Assert.AreEqual(expectedOutput, order.CurrentOrder.ElementAt(order.CurrentOrder.Count - 1).Value);
         }
 
+        [Test]
+        public void ItemNotFound_ShouldThrowException_WhenPassedWrongItem()
+        {
+            Assert.Throws<Exception>(() => order.ItemNotFound("Missing"));
+        }
+
+
     }
+        public class ReceiptTests
+        {
+            Menu menu;
+            Order order;
+            Receipt receipt;
+
+            [SetUp]
+            public void InitReceipt()
+            {
+            menu = new Menu();
+            order = new Order();
+            receipt = new Receipt();
+            }
+
+            [Test]
+            public void ItemSubtotal_Returns6_WhenPassed2And3()
+            {
+            var expectedOutput = 6;
+            Assert.AreEqual(expectedOutput, receipt.ItemSubtotalCalc(2, 3));
+            }
+            
+            [Test]
+            public void PrintReceipt_ReturnsFormattedReceipt_WhenPassedOrder()
+            {
+            order.addOrder("Burger", 1);
+            order.addOrder("Hotdog", 2);
+            var expectedOutput = "Burger x 1 : £2.00\r\nHotdog x 2 : £3.00\r\nYour total is: £5.00";
+            Assert.AreEqual(expectedOutput, receipt.FormatReceiptForPrinting(order));
+                
+            }
+
+        
+
+
+        }
 }
