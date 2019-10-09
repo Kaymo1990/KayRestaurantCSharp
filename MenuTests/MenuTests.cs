@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Restaurant;
 using System;
+using System.Linq;
 
 namespace Tests
 {
@@ -34,5 +35,35 @@ namespace Tests
             var expectedOutput = "Burger: £2.00\r\nHotdog: £1.50\r\nBanana: £1.11\r\nChips: £0.99\r\n";
             Assert.AreEqual(expectedOutput, menu.ViewItemsAndPrices());
         }
+    }
+
+    public class OrderTests
+    {
+        Menu menu;
+        Order order;
+
+        [SetUp]
+        public void InitRestaurant()
+        {
+            menu = new Menu();
+            order = new Order();
+        }
+
+        [Test]
+        public void OrderItem_ShouldAddItemAndQuantity_ToCurrentOrder()
+        {
+            order.addOrder("Burger", 1);
+            var expectedOutput = "Burger";
+            Assert.AreEqual(expectedOutput, order.CurrentOrder.ElementAt(order.CurrentOrder.Count - 1).Key);
+        }
+
+        [Test]
+        public void OrderQuantity_ShouldAddItemAndQuantity_ToCurrentOrder()
+        {
+            order.addOrder("Burger", 1);
+            var expectedOutput = 1;
+            Assert.AreEqual(expectedOutput, order.CurrentOrder.ElementAt(order.CurrentOrder.Count - 1).Value);
+        }
+
     }
 }
