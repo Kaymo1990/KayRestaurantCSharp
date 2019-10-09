@@ -5,3 +5,13 @@ C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csprojAssem
 C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
 C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.exe
 C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Twilio.dll
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Kay\source\repos\Restaurant\Restaurant\bin\Debug\Twilio.xml
+C:\Users\Kay\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CopyComplete

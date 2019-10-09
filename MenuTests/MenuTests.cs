@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Restaurant;
+using System;
 
 namespace Tests
 {
@@ -25,6 +26,13 @@ namespace Tests
         {
             var expectedOutput = 2.00;
             Assert.AreEqual(expectedOutput, menu.menuPrices["Burger"]);
+        }
+
+        [Test]
+        public void ViewItemAndPrices_ReturnsFormattedItemsAndPrices_WhenCalled()
+        {
+            var expectedOutput = "Burger: £2.00\r\nHotdog: £1.50\r\nBanana: £1.11\r\nChips: £0.99\r\n";
+            Assert.AreEqual(expectedOutput, menu.ViewItemsAndPrices());
         }
     }
 }

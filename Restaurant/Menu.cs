@@ -21,7 +21,7 @@ namespace Restaurant
             var fullMenu = "";
             foreach(var item in menuPrices)
             {
-                fullMenu += $"{item.Key}: £{item.Value}" + Environment.NewLine;
+                fullMenu += $"{item.Key}: £{item.Value.ToString("F2")}" + Environment.NewLine;
             }
 
             return fullMenu;
