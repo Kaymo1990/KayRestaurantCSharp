@@ -99,7 +99,7 @@ namespace Tests
             {
             order.addOrder("Burger", 1);
             order.addOrder("Hotdog", 2);
-            var expectedOutput = "Burger x 1 : £2.00\r\nHotdog x 2 : £3.00\r\nYour total is: £5.00";
+            var expectedOutput = "*~Your Kay Restaurant Order~*\r\nBurger x 1 : £2.00\r\nHotdog x 2 : £3.00\r\nYour total is: £5.00";
             Assert.AreEqual(expectedOutput, receipt.FormatReceiptForPrinting(order));
                 
             }
@@ -113,6 +113,16 @@ namespace Tests
             Assert.IsTrue(ReceiptVerification.CorrectValue(receipt, 5.00)); 
 
         } 
+
+        [Test]
+        public void NexmoText_ShouldSendText_WhenCalled()
+        {
+            order.addOrder("Burger", 1);
+            order.addOrder("Hotdog", 2);
+            receipt.FormatReceiptForPrinting(order);
+            var ordertext = new TextOrder();
+            Assert.AreEqual("Sent", ordertext.SentTextOrder(receipt.StoredReceipt));
+        }
 
 
 
