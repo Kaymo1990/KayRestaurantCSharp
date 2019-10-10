@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Nexmo.Api;
 
 namespace Restaurant
 {
@@ -14,6 +15,7 @@ namespace Restaurant
             var menu = new Menu();
             var order = new Order();
             var receipt = new Receipt();
+            var textOrder = new TextOrder();
 
             Console.WriteLine("Welcome to the GREATEST restaurant! \r\nThe KAY RESTAURANT!" +
                 "\r\nHere are some of our options:\r\n" +
@@ -44,8 +46,9 @@ namespace Restaurant
 
             Console.WriteLine("Enter your phone number for SMS receipt and estimated delivery time: ");
             var mobileNumber = Console.ReadLine().ToString();
-
-            Console.WriteLine($"Here is your order, which has also been texted to you:\r\n"
+            textOrder.MobNumber = mobileNumber;
+            textOrder.SentTextOrder(receipt.StoredReceipt);
+            Console.WriteLine($"Here is your order, which will also been texted to you:\r\n"
                 + $"{receipt.FormatReceiptForPrinting(order)}" + "\r\nEnjoy the best food EVER!");
 
         }
