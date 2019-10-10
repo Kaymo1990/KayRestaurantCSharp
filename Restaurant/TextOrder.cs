@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nexmo.Api;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,26 +9,30 @@ using Twilio.Rest.Api.V2010.Account;
 
 namespace Restaurant
 {
-    class TextOrder
+    public class TextOrder
     {
-        public static void SentTextOrder(string receipt)
+        private static string mobNumber = "44787628699";
+
+        public static string MobNumber { get => mobNumber; set => mobNumber = value; }
+        public static void TextReceipt(Receipt receipt)
         {
-            {
-                // Find your Account Sid and Token at twilio.com/console
-                // DANGER! This is insecure. See http://twil.io/secure
-                const string accountSid = "AC13146fc0948c7b0a80620342784fb7b4";
-                const string authToken = "38f00c1ba8e62fcd075a8efe2583eb0c";
-
-                TwilioClient.Init(accountSid, authToken);
-
-                var message = MessageResource.Create(
-                    body: receipt,
-                    from: new Twilio.Types.PhoneNumber("+441622321259"),
-                    to: new Twilio.Types.PhoneNumber("+44787628699")
-                );
-
-                Console.WriteLine(message.Sid);
-            }
+            TextOrder.SentTextOrder(receipt.StoredReceipt, MobNumber);
         }
+
+        public static void SentTextOrder(string receipt, string mobNumber)
+        {
+            var client = new Client(creds: new Nexmo.Api.Request.Credentials
+            {
+                ApiKey = "10023f21",
+                ApiSecret = "wu4AX4zzKwKl7cXf"
+            });
+            var results = client.SMS.Send(request: new SMS.SMSRequest()
+            {
+                from = "Nexmo",
+                to = mobNumber,
+                text = receipt
+            });
+        }
+
     }
 }

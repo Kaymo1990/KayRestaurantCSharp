@@ -93,7 +93,7 @@ namespace Tests
             var expectedOutput = 6;
             Assert.AreEqual(expectedOutput, receipt.ItemSubtotalCalc(2, 3));
             }
-            /*
+            
             [Test]
             public void PrintReceipt_ReturnsFormattedReceipt_WhenPassedOrder()
             {
@@ -112,7 +112,7 @@ namespace Tests
             receipt.FormatReceiptForPrinting(order);
             Assert.IsTrue(ReceiptVerification.CorrectValue(receipt, 5.00)); 
 
-        } */
+        } 
 
 
 

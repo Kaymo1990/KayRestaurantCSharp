@@ -8,12 +8,20 @@ namespace Restaurant
 {
     public class Receipt
     {
-        Menu menu = new Menu();
+        private string storedReceipt = "";
+        private Menu menu;
+        public Receipt()
+        {
+            menu = new Menu();
+        }
+        
         public double receiptTotal = 0;
+
+        public string StoredReceipt { get => storedReceipt; set => storedReceipt = value; }
 
         public string FormatReceiptForPrinting(Order order)
         {
-            string finalReceipt = "";
+            string finalReceipt = "*~Your Kay Restaurant Order~*\r\n";
             double finalTotal = 0;
 
             foreach (var singleOrder in order.CurrentOrder)
@@ -24,7 +32,7 @@ namespace Restaurant
             }
             receiptTotal = finalTotal;
             finalReceipt += $"Your total is: £{finalTotal.ToString("F2")}";
-            TextOrder.SentTextOrder(finalReceipt);
+            StoredReceipt = finalReceipt;
             return finalReceipt;
         }
 
